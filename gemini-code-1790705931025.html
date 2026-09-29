@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLMIS - Computer Literacy Monitoring and Intervention System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg">
+        <div class="circuit-grid"></div>
+        <div class="data-particles"></div>
+    </div>
+
+    <div class="login-container">
+        <div class="header-section">
+            <div class="logos">
+                <span class="badge-school">School Logo</span>
+                <span class="badge-clmis">CLMIS Logo</span>
+            </div>
+            <h1>Computer Literacy Monitoring and Intervention System</h1>
+            <p>CLMIS is a digital assessment and monitoring system designed to evaluate computer literacy, track student progress, and provide targeted learning interventions.</p>
+        </div>
+
+        <div class="card login-card">
+            <h2>LOGIN</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="userId">User ID</label>
+                    <input type="text" id="userId" placeholder="Enter User ID" required autocomplete="off" value="">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required value="">
+                </div>
+                <button type="submit" class="btn-primary">LOGIN</button>
+            </form>
+            <div class="register-prompt">
+                <p>New Student? <a href="#" id="showRegisterModal">Register Here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Student Registration Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Student Account Registration</h2>
+            <form id="registerForm">
+                <!-- Registration fields for Student Number, Credentials, Device Background, and Privacy Agreement -->
+                <div class="form-group">
+                    <label>Student Number</label>
+                    <input type="text" id="regStudentNumber" required>
+                </div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="regFullName" required>
+                </div>
+                <div class="form-group">
+                    <label>Age & Gender</label>
+                    <input type="number" id="regAge" placeholder="Age" required>
+                    <select id="regGender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Grade Level and Section</label>
+                    <select id="regSection" required>
+                        <option value="Grade 11 – Confucius">Grade 11 – Confucius</option>
+                        <option value="Grade 11 – Locke">Grade 11 – Locke</option>
+                        <option value="Grade 12 – Vega">Grade 12 – Vega</option>
+                        <option value="Grade 12 – Sirius">Grade 12 – Sirius</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="regEmail" placeholder="" required>
+                </div>
+                <div class="form-group">
+                    <label>Create Username & Password</label>
+                    <input type="text" id="regUserId" placeholder="New User ID" required>
+                    <input type="password" id="regPassword" placeholder="New Password" required>
+                </div>
+                <!-- Device & Privacy Compliance -->
+                <div class="privacy-box">
+                    <p><strong>Data Privacy Notice:</strong> CLMIS complies with Republic Act No. 10173 (Data Privacy Act of 2012).</p>
+                    <label><input type="checkbox" id="regAgreed" required> I Agree to the Terms and Conditions and Data Privacy Consent.</label>
+                </div>
+                <button type="submit" class="btn-primary">CONTINUE & REGISTER</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
